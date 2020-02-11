@@ -24,10 +24,7 @@ public class Independencia : MonoBehaviour
                 Debug.Log("Countries not found " + country);
             }
 
-            map.countries[sourceCountryIndex].showProvinces = false;
             map.countries[sourceCountryIndex].allowProvincesHighlight = false;
-            map.ToggleCountryOutline(sourceCountryIndex, true);
-            map.ToggleCountrySurface(sourceCountryIndex, true, Color.white);
         }
 
         map.Redraw();
