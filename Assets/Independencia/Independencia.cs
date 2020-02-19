@@ -43,10 +43,12 @@ public class Independencia : MonoBehaviour
         // We want only to show names if they are Spanish provinces
         map.OnCountryEnter += Map_OnCountryEnter;
 
-        // We color the provinces
-        // Andalucia
+        Vector2 madridLocation = map.GetCity("Ourense", "Spain").unity2DLocation;
+        provinceBars = GameObject.Find("Bar3DSimple");
+        map.AddMarker3DObject(provinceBars, madridLocation, 0.5f);
+        adjustBarPosition();
 
-        map.ToggleProvinceSurface(map.GetProvinceIndex("Spain","Andalucía"), true, new Color(221f/255f,77f/255f,67f/255f));
+        map.ToggleProvinceSurface(map.GetProvinceIndex("Spain","Andalucía"), true, new Color(221f/255f,77f/255f,67f/255f),null,true);
         map.ToggleProvinceSurface(map.GetProvinceIndex("Spain", "Aragón"), true, new Color(157f/255f, 132f/255f, 42f/255f));
         map.ToggleProvinceSurface(map.GetProvinceIndex("Spain", "Asturias"), true, new Color(254f/255f,132f/255f, 42f/255f));
         map.ToggleProvinceSurface(map.GetProvinceIndex("Spain", "Baleares"), true, new Color(252f/255f, 118f/255f, 106f/255f));
@@ -63,15 +65,6 @@ public class Independencia : MonoBehaviour
         map.ToggleProvinceSurface(map.GetProvinceIndex("Spain", "Navarra"), true, new Color(242f/255f, 237f/255f, 215f/255f));
         map.ToggleProvinceSurface(map.GetProvinceIndex("Spain", "País Vasco"), true, new Color(215f/255f, 196f/255f, 157f/255f));
         map.ToggleProvinceSurface(map.GetProvinceIndex("Spain", "Valencia"), true, new Color(164f/255f, 231f/255f,223f/255f));
-
-        map.Redraw();
-
-        Vector2 madridLocation = map.GetCity("Ourense", "Spain").unity2DLocation;
-        provinceBars = GameObject.Find("Bar3DSimple");
-        map.AddMarker3DObject(provinceBars, madridLocation,0.5f);
-        adjustBarPosition();
-
-        map.Redraw();
 
     }
 
@@ -97,7 +90,6 @@ public class Independencia : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
     }
 
