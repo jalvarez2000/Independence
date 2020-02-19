@@ -7,7 +7,10 @@ public class Independencia : MonoBehaviour
 {
     // Start is called before the first frame update
     WMSK map;
-    List<string> countries = new List<string>() { "France", "Portugal", "Algeria", "Morocco" };
+    List<string> peripheralCountries = new List<string>() { "Andorra","France", "Portugal", "Algeria", "Morocco" };
+    string currentCountry = "Spain";
+    Vector2 centerProvince;
+    GameObject provinceBars;
 
     void Start()
     {
@@ -15,19 +18,26 @@ public class Independencia : MonoBehaviour
 
         // Adjacent countries are not selectable
 
-        foreach (string country in countries)
+        foreach (string country in peripheralCountries)
         {
-            int sourceCountryIndex = map.GetCountryIndex(country);
+            int sourcePeripheralCountryIndex = map.GetCountryIndex(country);
 
-            if (sourceCountryIndex < 0)
+            if (sourcePeripheralCountryIndex < 0)
             {
                 Debug.Log("Countries not found " + country);
             }
 
-            map.countries[sourceCountryIndex].allowProvincesHighlight = false;
+            map.countries[sourcePeripheralCountryIndex].allowProvincesHighlight = false;
+            map.countries[sourcePeripheralCountryIndex].allowHighlight = false;
+
         }
 
-        map.Redraw();
+        int sourceCurrentCountryIndex = map.GetCountryIndex(currentCountry);
+
+        for (int sourceProvinceIndex = 0; sourceProvinceIndex < 5; sourceProvinceIndex++)
+        {
+            centerProvince = map.countries[sourceCurrentCountryIndex].provinces[sourceProvinceIndex].centerRect;
+        }
 
 
         // We want only to show names if they are Spanish provinces
@@ -53,6 +63,24 @@ public class Independencia : MonoBehaviour
         map.ToggleProvinceSurface(map.GetProvinceIndex("Spain", "Navarra"), true, new Color(242f/255f, 237f/255f, 215f/255f));
         map.ToggleProvinceSurface(map.GetProvinceIndex("Spain", "País Vasco"), true, new Color(215f/255f, 196f/255f, 157f/255f));
         map.ToggleProvinceSurface(map.GetProvinceIndex("Spain", "Valencia"), true, new Color(164f/255f, 231f/255f,223f/255f));
+
+        map.Redraw();
+
+        Vector2 madridLocation = map.GetCity("Ourense", "Spain").unity2DLocation;
+        provinceBars = GameObject.Find("Bar3DSimple");
+        map.AddMarker3DObject(provinceBars, madridLocation,0.5f);
+        adjustBarPosition();
+
+        map.Redraw();
+
+    }
+
+    void adjustBarPosition()
+    {
+        provinceBars = GameObject.Find("Bar3DSimple");
+        provinceBars.transform.eulerAngles = new Vector3(0, 0, 0);
+        provinceBars.transform.localScale = new Vector3(0.0005f, 0.0005f, 0.001f);
+        provinceBars.transform.position = new Vector3(provinceBars.transform.position.x, provinceBars.transform.position.y, -3);
     }
 
     private void Map_OnCountryEnter(int countryIndex, int regionIndex)
@@ -68,6 +96,12 @@ public class Independencia : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        
+
+    }
+
+    void OnGUI()
     {
     }
 
