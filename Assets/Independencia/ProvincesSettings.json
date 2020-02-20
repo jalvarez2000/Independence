@@ -7,16 +7,223 @@
                 "pib": "5",
                 "support": "6",
                 "xxx": "8"
+            },
+            "initcolor": {
+                "r": 59,
+                "g": 58,
+                "b": 80
             }
+
         },
         {
             "province": "Cataluña",
-            "city": "Barcelona",
+            "city": "Tarragona",
             "statistics": {
                 "pib": "2",
                 "support": "3",
                 "xxx": "2"
+            },
+            "initcolor": {
+                "r": 45,
+                "g": 92,
+                "b": 158
             }
-        }   
+        },
+        {
+            "province": "Andalucía",
+            "city": "Seville",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            },
+            "initcolor": {
+                "r": 221,
+                "g": 77,
+                "b": 67
+            }
+        },
+        {
+            "province": "Aragón",
+            "city": "Zaragoza",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            },
+            "initcolor": {
+                "r": 157,
+                "g": 132,
+                "b": 42
+            }
+        },
+        {
+            "province": "Navarra",
+            "city": "Pamplona",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            },
+            "initcolor": {
+                "r": 242,
+                "g": 237,
+                "b": 215
+            }
+        },
+        {
+            "province": "Asturias",
+            "city": "Oviedo",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            },
+            "initcolor": {
+                "r": 254,
+                "g": 132,
+                "b": 42
+            }
+        },
+        {
+            "province": "Baleares",
+            "city": "Palma",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            },
+            "initcolor": {
+                "r": 252,
+                "g": 118,
+                "b": 106
+            }
+        },
+        {
+            "province": "Cantabria",
+            "city": "Santander",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            },
+            "initcolor": {
+                "r": 200,
+                "g": 62,
+                "b": 115
+            }
+        },
+        {
+            "province": "Castilla La Mancha",
+            "city": "Albacete",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            },
+            "initcolor": {
+                "r": 141,
+                "g": 148,
+                "b": 64
+            }
+        },
+        {
+            "province": "Castilla y León",
+            "city": "Valladolid",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            },
+            "initcolor": {
+                "r": 253,
+                "g": 214,
+                "b": 94
+            }
+        },
+        {
+            "province": "Extremadura",
+            "city": "Badajoz",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            },
+            "initcolor": {
+                "r": 117,
+                "g": 92,
+                "b": 158
+            }
+        },
+        {
+            "province": "Galicia",
+            "city": "Ourense",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            },
+            "initcolor": {
+                "r": 217,
+                "g": 59,
+                "b": 60
+            }
+        },
+        {
+            "province": "La Rioja",
+            "city": "Logroño",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            },
+            "initcolor": {
+                "r": 97,
+                "g": 98,
+                "b": 71
+            }
+        },
+        {
+            "province": "Murcia",
+            "city": "Murcia",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            },
+            "initcolor": {
+                "r": 97,
+                "g": 85,
+                "b": 80
+            }
+        },
+        {
+            "province": "País Vasco",
+            "city": "Bilbao",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            },
+            "initcolor": {
+                "r": 215,
+                "g": 196,
+                "b": 157
+            }
+        },
+        {
+            "province": "Valencia",
+            "city": "Valencia",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            },
+            "initcolor": {
+                "r": 164,
+                "g": 231,
+                "b": 223
+            }
+        }
     ]
 }

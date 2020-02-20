@@ -12,13 +12,25 @@ public class Statistics
     public String support;
     public String xxx;
 }
+
+[Serializable]
+public class InitColor
+{
+    public float r;
+    public float g;
+    public float b;
+}
+
 [Serializable]
 public class ProvinceSettings
 {
     public String province;
     public String city;
     public Statistics statistics;
+    public InitColor initcolor;
 }
+
+
 
 [Serializable]
 public class ProvincesSettings
