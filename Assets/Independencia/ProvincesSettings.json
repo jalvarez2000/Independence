@@ -1,0 +1,22 @@
+﻿{
+    "provinces": [
+        {
+            "province": "Madrid",
+            "city": "Madrid",
+            "statistics": {
+                "pib": "5",
+                "support": "6",
+                "xxx": "8"
+            }
+        },
+        {
+            "province": "Cataluña",
+            "city": "Barcelona",
+            "statistics": {
+                "pib": "2",
+                "support": "3",
+                "xxx": "2"
+            }
+        }   
+    ]
+}

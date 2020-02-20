@@ -66,6 +66,8 @@ public class Independencia : MonoBehaviour
         map.ToggleProvinceSurface(map.GetProvinceIndex("Spain", "País Vasco"), true, new Color(215f/255f, 196f/255f, 157f/255f));
         map.ToggleProvinceSurface(map.GetProvinceIndex("Spain", "Valencia"), true, new Color(164f/255f, 231f/255f,223f/255f));
 
+        ProvincesSettings provincesSettings = JSONProvinceSettings.getInstance();
+
     }
 
     void adjustBarPosition()
